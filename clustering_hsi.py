@@ -108,7 +108,7 @@ if __name__ == "__main__":
     print(f"Reconstrucao RGB->HSI->RGB salva (erro medio: {erro:.2f}/255)")
 
     # 4) RGB -> HSI -> K-Means -> RGB para varios numeros de clusters
-    for k in (1, 2, 4):
+    for k in (128, 256, 502):
         hsi_quant = clusterizar_hsi(hsi, n_clusters=k)
         rgb_final = hsi_para_rgb(hsi_quant)
         nome = f"praia_kmeans_k{k}.png"
